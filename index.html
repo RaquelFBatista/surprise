@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surpresa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Janela 1 -->
+  <div id="frame1" class="frame">
+    <h2>Tá cansadinho porque acabou de chegar do trabalho?</h2>
+    <button onclick="nextScreen('frame1', 'frame2')">Tenho algo pra você</button>
+  </div>
+
+  <!-- Janela 2 -->
+  <div id="frame2" class="frame">
+    <h2>Antes de começar, precisamos confirmar algumas informações...</h2>
+    <button onclick="nextScreen('frame2', 'frame3')">Continuar</button>
+  </div>
+
+  <!-- Janela 3 -->
+  <div id="frame3" class="frame">
+    <h2>Confirme sua identidade:</h2>
+    <p>(Dica: faz xixi na cama)</p>
+    <input type="text" id="identity" placeholder="Digite sua identidade">
+    <button onclick="verifyIdentity()">Confirmar</button>
+    <p id="error-message" class="error"></p>
+  </div>
+
+  <!-- Janela 4 -->
+  <div id="frame4" class="frame">
+    <h2>Você dá grau em uma motoca azul fazendo randandandan?</h2>
+    <button onclick="nextScreen('frame4', 'frame5')">Sim</button>
+    <button id="noBtn" class="noBtn">Não</button>
+  </div>
+
+  <!-- Janela 5 -->
+  <div id="frame5" class="frame">
+    <h2>Tem uma momolada em Brasília?</h2>
+    <button onclick="nextScreen('frame5', 'final')">Sim</button>
+    <button id="noBtn2" class="noBtn">Não</button>
+  </div>
+
+  <!-- Janela Final -->
+  <div id="final" class="frame">
+    <h2>Bom trabalho, meu amor! Te amo e estarei aqui por você sempre ❤️</h2>
+    <p></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
